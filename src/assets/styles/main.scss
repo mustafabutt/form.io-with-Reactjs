@@ -1,0 +1,60 @@
+@import 'bootstrap-3.3.7';
+//Var Definition
+$page-bgcolor: #ffffff;
+$scrollbar-color: rgba(0, 0, 0, 0.1);
+$scrollbarthumb-color: rgba(0, 0, 0, 0.5);
+.scrollBar::-webkit-scrollbar {
+  width: 6px; /* for vertical scrollbars */
+  height: 6px; /* for horizontal scrollbars */
+}
+
+.scrollBar::-webkit-scrollbar-track {
+  background: $scrollbar-color;
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+  background: $scrollbarthumb-color;
+}
+.page-wrapper {
+  margin-top:40px;
+  padding: 0px 15px;
+  overflow: auto;
+  @extend .scrollBar;
+  height:calc(100vh - 45px);
+
+  .page-container {
+    background: $page-bgcolor;
+    @extend .container-fluid;
+  }
+}
+.table-heading-data:nth-child(even){
+  background:#f8f8f8;
+}
+
+.text-overflow-hide{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.table-bordered{
+  line-height: 28px;
+  .col-md-4{
+    border-right:1px solid red;
+  }
+}
+.bg-primary{
+  background: green;
+}
+.table-main{
+  height: 380px;
+  border: 1px solid #f8f8f8;
+  padding: 0px;
+}
+.loader-main{
+  display: table;
+  height:100%;
+  margin:0 auto;
+  .loader{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
